@@ -38,3 +38,30 @@
 
       .submit 
         = f.submit 'Create Showtime', :class => "button"
+  #comments
+    %h2.centered Comments
+        
+    %table
+      %thead
+        %th Comment
+      %tbody
+        - @comments.each do |comment|
+          %tr
+            %td= comment.comment
+
+    = form_for [@movie, @comment] do |f|
+      .comment
+        = f.label :comment
+        = f.text_field :comment
+
+      .submit 
+        = f.submit 'Create Comment', :class => "button"
+
+
+
+
+
+
+
+
+

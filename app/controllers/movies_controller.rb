@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     @showtimes = @movie.showtimes
     @showtime = @movie.showtimes.new
     @comments = @movie.comments
-    @comment = @movie.comment.new
+    @comment = @movie.comments.new
   end
 
   # GET /movies/new
