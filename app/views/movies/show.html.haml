@@ -23,6 +23,9 @@
           %tr
             %td= showtime.location
             %td= showtime.time
+        - @comments.each do |comment|
+          %tr
+            %td= comment.comment
 
     = form_for [@movie, @showtime] do |f|
       .location
