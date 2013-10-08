@@ -23,9 +23,6 @@
           %tr
             %td= showtime.location
             %td= showtime.time
-        - @comments.each do |comment|
-          %tr
-            %td= comment.comment
 
     = form_for [@movie, @showtime] do |f|
       .location
@@ -38,55 +35,24 @@
 
       .submit 
         = f.submit 'Create Showtime', :class => "button"
-<<<<<<< HEAD
-  #comments
-    %h2.centered Comments
-        
-    %table
-      %thead
-=======
 
   #comments
     %h2.centered Comments
 
     %table
       %thead
-        %th Username
->>>>>>> 1319bf24f2154fda62176a2eba528f669544384c
         %th Comment
       %tbody
         - @comments.each do |comment|
           %tr
-<<<<<<< HEAD
             %td= comment.comment
 
     = form_for [@movie, @comment] do |f|
       .comment
-=======
-            %td= comment.user
-            %td= comment.comment
-
-    = form_for [@movie, @comment] do |f|
-      .location
-        = f.label :user
-        = f.text_field :user
-
-      .time
->>>>>>> 1319bf24f2154fda62176a2eba528f669544384c
-        = f.label :comment
-        = f.text_field :comment
-
-      .submit 
+        %tr
+          = f.label :comment
+          = f.text_field :comment
+      
+      .submit
         = f.submit 'Create Comment', :class => "button"
-<<<<<<< HEAD
 
-
-
-
-
-
-
-
-
-=======
->>>>>>> 1319bf24f2154fda62176a2eba528f669544384c
